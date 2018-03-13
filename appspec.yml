@@ -16,4 +16,3 @@ hooks:
   ValidateService:
     - location: bash/monitor.sh
       timeout: 3600
-      runas: codedeployuser

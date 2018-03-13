@@ -21,7 +21,7 @@
 - Inside Review, you may review all your configurations and create your pipeline.
 - After creating your pipeline successfully, your build will be deployed automatically or you may manually deploy your builds.
 - By following all above steps, your builds will be deployed automatically on every commit (after specific time frame).
-- If you are getting any failure on builds deployments, please create a file with your desired configurations in your repository with name ‘appspec.yml’.
+- If you are getting any failure on builds deployments, please create a file with your desired application configurations in your repository with a name of ‘appspec.yml’.
 
 ## Challenges
 - Configuring S3 Bucket for Builds and Revisions
