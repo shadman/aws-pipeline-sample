@@ -47,9 +47,19 @@
 - We can also use Jenkins or Solano instead of AWS CodeBuild per requirements/client need
 - We can also use S3 Bucket, AWS CodeCommit for code repositories instead of GitHub per requirements
 
+## Additional Details
+- We will have `buildspec.yml` file inside repository for AWS CodeBuild, where we can define all build specific required commands which we wants to execute during build generation time. Which includes version, environment variables, phases ( install, pre-build, build and post build) attributes to add your desired commands and settings for build generation.
+- Similarly, we will have ‘appspec.yml’ file inside our repository for AWS CodeDeploy, where we can define all application specific required commands which we wanted to execute during deployment time. Which includes version, os, files location for extracted build deployment, and hooks (before install, after install, application start and validate service) attributes to add your desired bash file for your deployments.
+- Inside AWS CodeBuild, it deploys your build in specified environment first to test, also you may configure your custom environments by using ‘advanced settings’. For more details you may see https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref.html#build-env-ref-env-vars 
+- AWS CodePipeline for different environments, we can setup multiple environments with in a single AWS CodePipeline by adding different required actions inside your pipeline, also you may add manual approval processes for approval and hold deployments on any specific environment for testing.
+- Manual Approval process can be added by the help of AWS SNS services.
+- AWS CodePipeline, there are no upfront fees or commitments. You pay only for what you use. AWS CodePipeline costs $1 per active pipeline* per month. Where an active pipeline is a pipeline that has existed for more than 30 days and has at least one code change that runs through it during the month.
+
+
 ## References
 https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install-ubuntu.html 
 https://aws.amazon.com/getting-started/tutorials/continuous-deployment-pipeline/
 https://aws.amazon.com/blogs/devops/continuous-delivery-for-a-php-application-using-aws-codepipeline-aws-elastic-beanstalk-and-solano-labs/ 
 https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-example.html 
 https://github.com/awslabs/aws-codedeploy-samples 
+https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref.html#build-env-ref-env-vars 
