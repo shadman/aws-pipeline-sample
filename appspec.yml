@@ -3,3 +3,17 @@ os: linux
 files:
   - source: /
     destination: /var/www/html/
+
+hooks:
+  BeforeInstall:
+    - location: bash/before_deployment.sh
+  AfterInstall:
+    - location: bash/after_deployment.sh
+      timeout: 180
+  ApplicationStart:
+    - location: bash/functional_test.sh
+      timeout: 3600
+  ValidateService:
+    - location: bash/monitor.sh
+      timeout: 3600
+      runas: codedeployuser
