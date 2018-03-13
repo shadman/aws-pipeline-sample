@@ -1,0 +1,19 @@
+version: 0.2
+env:
+  variables:
+    test: "yes"
+    environment: "production"
+
+phases:
+  install:
+    commands:
+      echo 'installing'
+  pre_build:
+    commands:
+      echo 'pre-build'
+  build:
+    commands:
+      echo 'build'
+  post_build:
+    commands:
+      echo 'post build'
