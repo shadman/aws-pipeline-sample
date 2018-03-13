@@ -6,8 +6,9 @@
 - Create a file ‘buildspec.yml’ for your build configurations and pre/post build commands.
 - Create an EC2 Instance for your project per your need.
 - Setup PHP and Apache into your EC2 instance by accessing via ssh manually.
+- Install CodeDeploy agent via https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install in your EC2 instance.
 - Go to AWS CodePipeline and create your new Project Pipeline.
-- In order to create your new pipeline, you need to follow some steps of create pipeline
+- In order to create your new pipeline, you need to follow some steps of create pipeline.
 - Inside Source, select GitHub or you may select any other available repository source where you have committed your code. After selection you need to give authorization to AWS for that repository.
 - After syncing your repository you need to select your desired repository and select your desired branch.
 - Inside Build, select AWS CodeBuild, or you may select any other available build provider per your need and availability.
@@ -19,7 +20,7 @@
 - Inside Service Role, create a service role in IAM to give AWS CodePipeline permission to use resources in your account. If you already have a service role configured for this purpose, you can choose it from the list instead of creating a role.
 - Inside Review, you may review all your configurations and create your pipeline.
 - After creating your pipeline successfully, your build will be deployed automatically or you may manually deploy your builds.
-- By following all above steps, your builds will be deployed automatically on every commit (after specific time frame)
+- By following all above steps, your builds will be deployed automatically on every commit (after specific time frame).
 - If you are getting any failure on builds deployments, please create a file with your desired configurations in your repository with name ‘appspec.yml’.
 
 ## Challenges
