@@ -14,10 +14,10 @@
 - Inside Build, select AWS CodeBuild, or you may select any other available build provider per your need and availability.
 - After selecting Build provider you may configure per your selected option, in our example we are going to setup for AWS CodeBuild, so you may enter a desired Project Name inside configuration section.
 - Also you may select your build environment by selecting OS and Runtime environment. Similarly, you may set your environment variables here (if needed).
-- This step also create a new role for build services, which you may see inside `AWS CodeBuild Service Role` section
-- Inside Deploy, select AWS CodeDeploy for EC2 Instances and create your desired application by clicking `Create a new one in AWS CodeDeploy`.
-- You also require to add your EC2 created instance in this step for your deployments by adding a name tag `key` and `value` inside environment section.
-- Inside Service Role, create a service role in IAM to give AWS CodePipeline permission to use resources in your account. If you already have a service role configured for this purpose, you can choose it from the list instead of creating a role.
+- This step also create a new role for build services, which you may see inside `AWS CodeBuild Service Role` section.
+- Inside Deploy, select AWS CodeDeploy for EC2 Instances and create your desired application by clicking `Create a new one in AWS CodeDeploy` along with deployment group.
+- You also require to add your EC2 instance which you have already created in above step for your deployments by adding a name tag and value.
+- Inside Service Role, create a service role in IAM to give AWS CodePipeline permission to use resources in your account. If you already have a service role. configured for this purpose, you can choose it from the list instead of creating a role.
 - Inside Review, you may review all your configurations and create your pipeline.
 - After creating your pipeline successfully, your build will be deployed automatically or you may manually deploy your builds.
 - By following all above steps, your builds will be deployed automatically on every commit (after specific time frame).
