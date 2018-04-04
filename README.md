@@ -63,3 +63,5 @@ https://aws.amazon.com/blogs/devops/continuous-delivery-for-a-php-application-us
 https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-example.html 
 https://github.com/awslabs/aws-codedeploy-samples 
 https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref.html#build-env-ref-env-vars 
+
+Test For Auto Deployment
