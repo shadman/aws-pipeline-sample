@@ -104,10 +104,10 @@ or
 
 
 ## References
-https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install-ubuntu.html 
-https://aws.amazon.com/getting-started/tutorials/continuous-deployment-pipeline/
-https://aws.amazon.com/blogs/devops/continuous-delivery-for-a-php-application-using-aws-codepipeline-aws-elastic-beanstalk-and-solano-labs/ 
-https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-example.html 
-https://github.com/awslabs/aws-codedeploy-samples 
-https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref.html#build-env-ref-env-vars 
+- https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install-ubuntu.html 
+- https://aws.amazon.com/getting-started/tutorials/continuous-deployment-pipeline/
+- https://aws.amazon.com/blogs/devops/continuous-delivery-for-a-php-application-using-aws-codepipeline-aws-elastic-beanstalk-and-solano-labs/ 
+- https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-example.html 
+- https://github.com/awslabs/aws-codedeploy-samples 
+- https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref.html#build-env-ref-env-vars 
 
