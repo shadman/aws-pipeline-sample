@@ -55,6 +55,53 @@
 - Manual Approval process can be added by the help of AWS SNS services.
 - AWS CodePipeline, there are no upfront fees or commitments. You pay only for what you use. AWS CodePipeline costs $1 per active pipeline* per month. Where an active pipeline is a pipeline that has existed for more than 30 days and has at least one code change that runs through it during the month.
 
+## EC2 Instance Requirements:
+- Inbound 80 port should be allowed for HTTP
+- S3 Storage access permission role should be assigned
+- Apache2 should be installed
+- PHP 7 should be installed
+- Code Deploy Agent should be installed
+
+## Install Apache2
+
+> $ sudo apt-get update
+
+> $ sudo apt-get install apache2
+	
+## Install PHP 7.0
+
+> $ sudo apt-get update
+
+> $ sudo apt-get install -y php7.0 libapache2-mod-php7.0 php7.0-cli
+
+> $ sudo /etc/init.d/apache2 restart
+
+You may verify by:
+
+> $ php -v
+	
+# Install Code Deploy Agent
+
+> $ sudo apt-get update
+
+> $ sudo apt-get install ruby # Ubuntu 16
+or
+> $ sudo apt-get install ruby2.0 # Ubuntu 14 
+
+> $ sudo apt-get install wget
+
+> $ cd /home/ubuntu
+
+> $ wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install
+
+> $ sudo chmod +x ./install
+
+> $ sudo ./install auto
+
+> $ sudo service codedeploy-agent status
+
+> $ sudo service codedeploy-agent start
+
 
 ## References
 https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install-ubuntu.html 
@@ -64,4 +111,3 @@ https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-e
 https://github.com/awslabs/aws-codedeploy-samples 
 https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref.html#build-env-ref-env-vars 
 
-Test For Auto Deployment
